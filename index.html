@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký & Tải xuống</title>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <h1>Chào mừng đến với Kênh KMGgaming07!</h1>
+        <p>Hãy đăng ký kênh YouTube của tôi để tiếp tục tải file.</p>
+        <a href="https://youtube.com/@kmggaming07?si=1RsQ_RLvdvBM14o4&sub_confirmation=1" 
+           target="_blank" 
+           id="yt-link" 
+           style="font-size: 18px; color: white; background-color: #ff0000; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+           Nhấn để đăng ký kênh
+        </a>
+        <br><br>
+        <button id="download-btn" 
+                style="display:none; font-size: 18px; color: white; background-color: #28a745; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            Tải file
+        </button>
+    </div>
+
+    <script>
+        // Khi người dùng nhấp vào liên kết YouTube
+        document.getElementById('yt-link').addEventListener('click', function() {
+            // Thời gian chờ trước khi hiện nút tải file
+            setTimeout(function() {
+                document.getElementById('yt-link').style.display = 'none'; // Ẩn liên kết YouTube
+                document.getElementById('download-btn').style.display = 'inline-block'; // Hiện nút tải file
+            }, 5000); // Thời gian chờ (5 giây)
+        });
+
+        // Chuyển hướng tải file khi nhấp vào nút tải
+        document.getElementById('download-btn').onclick = function() {
+            window.location.href = 'https://www.mediafire.com/file/yvb2rwnsmii9rpj/PLAY_VNG_2.16.1.apk/file';
+        };
+    </script>
+</body>
+</html>
